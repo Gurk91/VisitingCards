@@ -8,6 +8,8 @@
 
 import UIKit
 
+var masterCards: [Card] = []
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
