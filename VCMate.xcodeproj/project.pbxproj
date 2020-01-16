@@ -16,6 +16,7 @@
 		A4A6FEAB23C7B17D00B50D91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4A6FEAA23C7B17D00B50D91 /* Assets.xcassets */; };
 		A4A6FEAE23C7B17D00B50D91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4A6FEAC23C7B17D00B50D91 /* LaunchScreen.storyboard */; };
 		A4A6FEB623C7B31500B50D91 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A6FEB523C7B31500B50D91 /* Card.swift */; };
+		A4B40E2323D0A14900C05AA3 /* ShowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B40E2223D0A14900C05AA3 /* ShowCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A4A6FEAD23C7B17D00B50D91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4A6FEAF23C7B17D00B50D91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4A6FEB523C7B31500B50D91 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A4B40E2223D0A14900C05AA3 /* ShowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A4A6FEA323C7B17B00B50D91 /* AppDelegate.swift */,
 				A4A6FEA523C7B17B00B50D91 /* ViewController.swift */,
 				A4A6FEA723C7B17B00B50D91 /* Main.storyboard */,
+				A4B40E2223D0A14900C05AA3 /* ShowCard.swift */,
 				A46973B723CFEB4100208187 /* NewCardViewController.swift */,
 				A46973B123CF5E0B00208187 /* CardList.swift */,
 				A4A6FEAA23C7B17D00B50D91 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 			files = (
 				A4A6FEA623C7B17B00B50D91 /* ViewController.swift in Sources */,
 				A4A6FEB623C7B31500B50D91 /* Card.swift in Sources */,
+				A4B40E2323D0A14900C05AA3 /* ShowCard.swift in Sources */,
 				A46973B223CF5E0B00208187 /* CardList.swift in Sources */,
 				A4A6FEA423C7B17B00B50D91 /* AppDelegate.swift in Sources */,
 				A46973B023CF5BDB00208187 /* CardCell.swift in Sources */,
@@ -308,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gurk91.VCMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gurk91.VCMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

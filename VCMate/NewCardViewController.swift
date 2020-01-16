@@ -15,7 +15,6 @@ class NewCardViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var personName: UITextField!
     
     @IBOutlet weak var frontImage: UIImageView!
-    @IBOutlet weak var rearImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,29 +46,22 @@ class NewCardViewController: UIViewController, UINavigationControllerDelegate, U
         } else {
             //option error message
         }
-        frontImage = nil
-        
-        if let imageR = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        {
-            rearImage.image = imageR
-        } else {
-            //option error message
-        }
-        
+
         self.dismiss(animated: true, completion: nil)
         
     }
     
-    @IBAction func importRear(_ sender: Any) {
-        let imageR = UIImagePickerController()
-        imageR.delegate = self
-        imageR.sourceType = UIImagePickerController.SourceType.photoLibrary //choose Camera if you want user to take picture and import
-        imageR.allowsEditing = false
-        
-        self.present(imageR, animated: true){
-            //TBC after it is complete
-        }
-        
+    
+    @IBAction func createCard(_ sender: Any) {
+        print("pressed")
+        let name = personName.text!
+        let company = companyName.text!
+        print(name)
+        print(company)
+        let front = frontImage
+        let newCard = Card(frontImage: front!, companyName: company, person: name)
+        masterCards.append(newCard)
+        print("completed")
     }
     
 

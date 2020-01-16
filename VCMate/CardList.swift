@@ -19,6 +19,13 @@ class CardList: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MasterToDetail"{
+            let destination = segue.destination as! ShowCard
+            destination.card = sender as? Card
+        }
+    }
 }
 
 extension CardList: UITableViewDelegate, UITableViewDataSource {
@@ -34,5 +41,23 @@ extension CardList: UITableViewDelegate, UITableViewDataSource {
         cell.setCard(card: carrd)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let card = cards[indexPath.row]
+        performSegue(withIdentifier: "MasterToDetail", sender: card)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("Deleted")
+            
+            self.cards.remove(at: indexPath.row)
+            print("removed from cards")
+            masterCards.remove(at: indexPath.row)
+            print("removed from master")
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            print("del complete")
+        }
     }
 }

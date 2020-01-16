@@ -11,13 +11,11 @@ import UIKit
 
 class Card {
     var frontImage : UIImageView
-    var rearImage : UIImageView
     var companyName : String
     var person : String
     
-    init(frontImage: UIImageView, rearImage: UIImageView, companyName: String, person: String) {
+    init(frontImage: UIImageView, companyName: String, person: String) {
         self.frontImage = frontImage
-        self.rearImage = rearImage
         self.companyName = companyName
         self.person = person
     }
